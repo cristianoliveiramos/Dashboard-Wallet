@@ -1,0 +1,15 @@
+import "./styles"
+import { Grid } from "./styles"
+import MainHeader from "../MainHeader"
+import Aside from "../Aside"
+import Content from "../Content"
+
+export const Layout = () => {
+    return (
+        <Grid>
+            <MainHeader/>
+            <Aside/>
+            <Content/>
+        </Grid>
+    )
+}
