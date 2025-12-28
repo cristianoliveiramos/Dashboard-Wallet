@@ -1,3 +1,4 @@
+import { ITitleContainerProps } from "../interfaces/ITitleContainerProps";
 import { styled } from "styled-components";
 
 export const ContentHeaderWrapp = styled.div`
@@ -6,7 +7,7 @@ export const ContentHeaderWrapp = styled.div`
     width: 100%;
 `
 
-export const TitleWrapp = styled.div`
+export const TitleWrapp = styled.div<ITitleContainerProps>`
     color: ${props => props.theme.colors.white};
 
 		> h2 {
@@ -14,7 +15,7 @@ export const TitleWrapp = styled.div`
 				width: 55px;
 				content: '';
 				display: block;
-				border-bottom: 10px solid ${props => props.theme.colors.warning};
+				border-bottom: 10px solid ${props => props.lineColor};
 			}
 		}
 `
@@ -23,10 +24,4 @@ export const Controllers = styled.div`
     display: flex;
     gap: 10px;
     align-items: center;
-`
-
-export const Button = styled.button`
-    background-color: transparent;
-    border: 1px solid ${props => props.theme.colors.white};
-    color: ${props => props.theme.colors.white};
 `

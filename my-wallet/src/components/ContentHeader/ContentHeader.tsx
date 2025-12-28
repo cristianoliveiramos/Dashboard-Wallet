@@ -1,15 +1,20 @@
+import React from "react";
+import SelectInput from "../SelectInput";
 import "./styles"
-import { Button, ContentHeaderWrapp, Controllers, TitleWrapp } from "./styles";
+import { ContentHeaderWrapp, Controllers, TitleWrapp } from "./styles";
+import { IContentHeader } from "../interfaces/IContentHeader";
 
-export const ContentHeader = () => {
+export const ContentHeader: React.FC<IContentHeader> = ({title, lineColor, children}) => {
+
+
+
   return (
     <ContentHeaderWrapp>
-      <TitleWrapp>
-        <h2>Titulo</h2>
+      <TitleWrapp lineColor={lineColor}>
+        <h2>{title}</h2>
       </TitleWrapp>
       <Controllers>
-        <Button>Botao A</Button>
-        <Button>Botao B</Button>
+        {children}
       </Controllers>
 
     </ContentHeaderWrapp>
