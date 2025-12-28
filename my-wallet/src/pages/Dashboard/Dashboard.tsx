@@ -1,7 +1,10 @@
+import ContentHeader from "../../components/ContentHeader"
+import { DashboardWrapp } from "./styles"
+
 export const Dashboard = () => {
     return (
-        <div>
-            <h1>DASHBOARD</h1>
-        </div>
+        <DashboardWrapp>
+            <ContentHeader></ContentHeader>
+        </DashboardWrapp>
     )
 }
